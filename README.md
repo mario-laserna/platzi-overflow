@@ -1,5 +1,11 @@
 # PlatziOverflow
 
+## Ejercicio
+
+Este es un proyecto generado en el curso de MEAN de Platzi
+
+------
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.5.
 
 ## Development server
