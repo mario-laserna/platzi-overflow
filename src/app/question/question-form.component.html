@@ -13,5 +13,12 @@
       name="descripcion"
       ngModel="">
   </mat-form-field>
+
+  <mat-grid-list cols="4" rowHeight="3:2">
+    <mat-grid-tile *ngFor="let icon of icons">
+      <i mat-list-icon class="devicon devicon-{{ icon.name }}-{{ getIconVersion(icon) }}"></i>
+    </mat-grid-tile>
+  </mat-grid-list>
+
   <button mat-raised-button type="submit" color="accent">Enviar</button>
 </form>
