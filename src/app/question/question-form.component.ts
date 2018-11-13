@@ -5,7 +5,16 @@ import icons from './icons';
 
 @Component({
   selector: 'app-question-form',
-  templateUrl: './question-form.component.html'
+  templateUrl: './question-form.component.html',
+  styles: [`
+    i {
+      font-size: 48px;
+    }
+    
+    small {
+      display: block;
+    }
+  `]
 })
 export class QuestionFormComponent {
   icons: Object[] = icons;
