@@ -12,6 +12,9 @@ import 'hammerjs';
 // librerias
 import { MomentModule } from 'ngx-moment';
 
+// Rutas de la aplicacion
+import {Routing} from './app.routing';
+
 import { QuestionDetailComponent } from './question/question-detail.component';
 import { AnswerFormComponent } from './answer/answer-form.component';
 import { SigninScreenComponent } from './auth/signin-screen.component';
@@ -35,7 +38,8 @@ import {QuestionFormComponent} from './question/question-form.component';
     MaterialModule,
     MomentModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    Routing
   ],
   providers: [],
   bootstrap: [AppComponent]
