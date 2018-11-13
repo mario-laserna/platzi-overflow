@@ -8,11 +8,11 @@ import icons from './icons';
   templateUrl: './question-form.component.html',
   styles: [`
     i {
-      font-size: 48px;
+      font-size: 36px;
     }
-    
     small {
       display: block;
+      font-size: 10px;
     }
   `]
 })
@@ -34,7 +34,9 @@ export class QuestionFormComponent {
   onSubmit(form: NgForm) {
     const q = new Question(
       form.value.titulo,
-      form.value.descripcion
+      form.value.descripcion,
+      new Date(),
+      form.value.icon
     );
     console.log(q);
   }
