@@ -15,11 +15,19 @@ const q = new Question(
     i {
       font-size: 48px;
     }
+
     i.help {
       width: 48px !important;
       height: 48px !important;
       padding: 0 !important;
       font-size: 48px;
+    }
+
+    .add-question {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      font-size: 24px;
     }
   `]
 })
