@@ -6,28 +6,28 @@ Este es un proyecto generado en el curso de MEAN de Platzi
 
 ------
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.5.
+ejecutar app en anglular
 
-## Development server
+`npm run ng serve`
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+ejecutar con el comando configurado
 
-## Code scaffolding
+`npm run start`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+ejecutar index.js node antes de currently
+debe estar configurado en package.json
 
-## Build
+`npm run start:server`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+instalar babel
 
-## Running unit tests
+`npm install --save babel-cli babel-preset-es2015`
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+instalar express
+instalar concurrently para ejecutar de forma concurrente en consola varios comandos
 
-## Running end-to-end tests
+`npm install --save express nodemon concurrently`
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+con concurrently instalado y configurado
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+`npm start`
