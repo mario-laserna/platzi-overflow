@@ -25,6 +25,7 @@ instalar babel
 
 instalar express
 instalar concurrently para ejecutar de forma concurrente en consola varios comandos
+instalar nodemon para que node se reinicie antes cambios
 
 `npm install --save express nodemon concurrently`
 
