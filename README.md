@@ -32,3 +32,11 @@ instalar nodemon para que node se reinicie antes cambios
 con concurrently instalado y configurado
 
 `npm start`
+
+instalar url-join
+
+`npm install --save url-join`
+
+Se instala cross-env porque en windows estaba presentando problemas el seteo de variables de entorno
+
+`npm install --save-dev cross-env`

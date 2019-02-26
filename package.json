@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "start:server": "set DEBUG=platzi-overflow* & nodemon server/index.js --exec babel-node",
+    "start:server": "cross-env NODE_ENV=development cross-env DEBUG=platzi-overflow* nodemon server/index.js --exec babel-node",
     "start:client": "ng serve"
   },
   "private": true,
@@ -35,6 +35,7 @@
     "ngx-moment": "^3.3.0",
     "nodemon": "^1.18.10",
     "rxjs": "6.3.0",
+    "url-join": "^4.0.0",
     "zone.js": "^0.8.29"
   },
   "devDependencies": {
@@ -46,6 +47,7 @@
     "@types/jasminewd2": "^2.0.6",
     "@types/node": "~8.9.4",
     "codelyzer": "~4.2.1",
+    "cross-env": "^5.2.0",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~1.7.1",
