@@ -23,7 +23,7 @@ export class QuestionService {
       );
   }
 
-  /*getQuestion(id): Observable<Question> {
+  getQuestion(id): Observable<Question> {
     const url = urljoin(this.questionsUrl, id);
 
     return this.http.get(url)
@@ -32,7 +32,7 @@ export class QuestionService {
           return res as Question;
         })
       );
-  }*/
+  }
 
   handleError(error: any) {
     const errMsg = error.message ? error.message :
