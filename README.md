@@ -43,4 +43,4 @@ Se instala cross-env porque en windows estaba presentando problemas el seteo de 
 
 Se instala para leer los datos del body del request
 
-`npm install --save body-parse`
+`npm install --save body-parser`

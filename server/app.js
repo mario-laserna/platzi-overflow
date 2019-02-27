@@ -1,7 +1,12 @@
 import express from 'express'
-import { question } from "./routes";
+import bodyParse from 'body-parser'
+import { question } from "./routes"
 
 const app = express()
+
+// Configuracion de body parse
+app.use(bodyParse.json()) // body como json
+app.use(bodyParse.urlencoded({ extended: true })) // para hacer uso de la url en utf8
 
 if (process.env.NODE_ENV === 'development') {
   app.use((req, res, next) => {

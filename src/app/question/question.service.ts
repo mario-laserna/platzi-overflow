@@ -2,8 +2,8 @@ import {Injectable} from '@angular/core';
 import {Question} from './question.model';
 import {environment} from '../../environments/environment';
 import urljoin from 'url-join';
-import { Observable} from 'rxjs';
-import { map } from 'rxjs/operators';
+import {Observable, throwError} from 'rxjs';
+import {catchError, map} from 'rxjs/operators';
 import {HttpClient} from '@angular/common/http';
 
 @Injectable()
@@ -30,6 +30,12 @@ export class QuestionService {
       .pipe(
         map(res => {
           return res as Question;
+        }),
+        catchError(err => {
+          const errMsg = err.message ? err.message :
+            (err.status ? `${err.status} - ${err.statusText}` : 'Server Error');
+          console.log(errMsg);
+          return throwError(err);
         })
       );
   }
@@ -38,6 +44,7 @@ export class QuestionService {
     const errMsg = error.message ? error.message :
       (error.status ? `${error.status} - ${error.statusText}` : 'Server Error');
     console.log(errMsg);
+    return;
   }
 }
 
