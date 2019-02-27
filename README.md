@@ -40,3 +40,7 @@ instalar url-join
 Se instala cross-env porque en windows estaba presentando problemas el seteo de variables de entorno
 
 `npm install --save-dev cross-env`
+
+Se instala para leer los datos del body del request
+
+`npm install --save body-parse`
