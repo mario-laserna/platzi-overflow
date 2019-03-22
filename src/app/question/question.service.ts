@@ -4,7 +4,7 @@ import {environment} from '../../environments/environment';
 import urljoin from 'url-join';
 import {Observable, throwError} from 'rxjs';
 import {catchError, map} from 'rxjs/operators';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 
 @Injectable()
 export class QuestionService {
@@ -40,6 +40,19 @@ export class QuestionService {
       );
   }
 
+  addQuestion(question: Question) {
+    const body = JSON.stringify(question);
+    const headers = new HttpHeaders({'Content-Type': 'application/json'});
 
+    return this.http.post(this.questionsUrl, body, {headers})
+      .pipe(
+        catchError((error: Response) => Observable.throw(error.json()) )
+        /*map((response: Response) => response),
+        catchError((error: Response) => {
+          console.log(error.body.toString());
+          return throwError(error);
+        })*/
+      );
+  }
 }
 
