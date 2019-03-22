@@ -32,9 +32,10 @@ app.get('/:id', (req, res) => {
 
   if (typeof q !== 'undefined') {
     res.status(200).json(q)
+  }else{
+    res.status(404).send('Not found')
   }
 
-  res.status(404).send('Not found')
 })
 
 // POST /api/questions

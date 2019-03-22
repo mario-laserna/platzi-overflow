@@ -40,11 +40,6 @@ export class QuestionService {
       );
   }
 
-  handleError(error: any) {
-    const errMsg = error.message ? error.message :
-      (error.status ? `${error.status} - ${error.statusText}` : 'Server Error');
-    console.log(errMsg);
-    return;
-  }
+
 }
 
