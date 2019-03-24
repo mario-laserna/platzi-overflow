@@ -46,12 +46,14 @@ export class QuestionService {
 
     return this.http.post(this.questionsUrl, body, {headers})
       .pipe(
-        catchError((error: Response) => Observable.throw(error.json()) )
-        /*map((response: Response) => response),
+        map((response: Response) => {
+          // console.log(response.body.toString());
+          return response;
+        }),
         catchError((error: Response) => {
           console.log(error.body.toString());
           return throwError(error);
-        })*/
+        })
       );
   }
 }

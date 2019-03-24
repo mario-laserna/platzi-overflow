@@ -40,6 +40,6 @@ export class QuestionDetailComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.sub.unsuscribe();
+    // this.sub.unsuscribe();
   }
 }

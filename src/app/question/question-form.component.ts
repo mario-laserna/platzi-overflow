@@ -48,8 +48,9 @@ export class QuestionFormComponent {
     );
     this.questionService.addQuestion(q)
       .subscribe(
-        ( { _id } ) => console.log(_id),
-        error => console.log(error)
+        // response => console.log(response._id),
+        response => this.router.navigate(['/questions', response._id]),
+        error => console.log('error')
       );
 
     form.resetForm();
